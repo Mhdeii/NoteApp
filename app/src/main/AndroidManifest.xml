@@ -38,6 +38,11 @@
             android:exported="false" />
         <activity
             android:name="com.example.noteapp.MainActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name="com.example.noteapp.LoginActivity"
             android:exported="true"
             tools:ignore="MissingClass">
             <intent-filter>
