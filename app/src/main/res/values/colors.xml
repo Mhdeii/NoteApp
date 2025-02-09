@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="offWhite">#f6f6f6</color>
+    <color name="darkTeal">#1C3845</color>
+    <color name="brightTeal">#2F3574</color>
+    <color name="BrightGreen">#3FC896</color>
+<!--
+    <color name="brightBlue">#89969c</color>
+-->
+    <color name="gray">#AED7D7D7</color>
+    <color name="darkGray">#40A5A3A3</color>
+    <color name="read_more_color_for_sent">#3FC896</color>
+    <color name="read_more_color_for_received">#1C3845</color>
+</resources>

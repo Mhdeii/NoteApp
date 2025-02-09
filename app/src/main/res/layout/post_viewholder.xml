@@ -1,0 +1,215 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:layout_marginBottom="8dp"> <!-- Add margin bottom for space between posts -->
+
+        <!-- Action buttons and Author, Date, Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <!-- Author, Date, and Time -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/authorTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Author"
+                    android:textColor="@color/darkTeal"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" • "
+                    android:textColor="@color/darkTeal"
+                    android:textSize="16sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="@color/darkTeal"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" at "
+                    android:textColor="@color/darkTeal"
+                    android:textSize="11sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="@color/darkTeal"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <!-- Action buttons -->
+            <ImageButton
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="edit"
+                android:src="@drawable/edit_24px"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                app:tint="@color/darkTeal" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="delete"
+                android:src="@drawable/delete_24px"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                app:tint="@color/darkTeal" />
+        </LinearLayout>
+
+        <!-- Image slider for photos -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/photoViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Title"
+            android:textColor="@color/darkTeal"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkTeal"
+            android:background="@color/darkGray"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:hint="Description"
+            android:enabled="false" /> <!-- Set background to null to remove underline -->
+
+        <!-- Views -->
+        <LinearLayout
+            android:id="@+id/viewsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/eye"
+                android:contentDescription="Views Icon"/>
+
+            <TextView
+                android:id="@+id/viewsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Views"
+                android:textColor="@color/darkTeal"
+                android:textSize="12sp"
+                android:paddingStart="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Chat section -->
+        <LinearLayout
+            android:id="@+id/chatSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chat"
+                android:contentDescription="Chat Icon"/>
+
+            <TextView
+                android:id="@+id/chatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat user"
+                android:textColor="@color/darkTeal"
+                android:textSize="12sp"
+                android:paddingStart="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Comments section -->
+        <LinearLayout
+            android:id="@+id/commentsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="19dp"
+            android:gravity="start|center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comments"
+                android:contentDescription="Comments Icon"/>
+
+            <TextView
+                android:id="@+id/commentsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:textColor="@color/darkTeal"
+                android:textSize="12sp"
+                android:paddingStart="8dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

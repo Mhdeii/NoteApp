@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NoteApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <string name="map">  Map  </string>
+    <string name="home">  Home  </string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log Out</string>
+    <string name="poll">  poll  </string>
+
+    <!-- 2 hours * 60 minutes/hour * 60 seconds/minute * 1000 milliseconds/second = 7200000 milliseconds -->
+    <integer name="two_hrs">7200000</integer>
+
+</resources>
